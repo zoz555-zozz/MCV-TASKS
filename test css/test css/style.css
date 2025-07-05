@@ -1,0 +1,40 @@
+body {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.profile-card {
+  text-align: center;
+  background: #1e1e1e;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  width: 280px;
+}
+
+.messi-photo {
+  width: 100%;
+  height: auto;
+}
+
+.info-box {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.info-box h2 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+  color: #222;
+}
+
+.info-box p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}

@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+#rocket {
+  width: 30px;
+  height: 60px;
+  background: red;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 2s ease-out;
+}
+
+#rocket::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 20px;
+  background: orange;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.fly {
+  animation: flyUp 2s forwards;
+}
+
+#rocket.fly::before {
+  animation: flame 0.2s infinite;
+  opacity: 1;
+}
+
+@keyframes flyUp {
+  0% { bottom: 70px; }
+  100% { bottom: 100vh; opacity: 0; }
+}
+
+@keyframes flame {
+  0%, 100% { height: 15px; }
+  50% { height: 25px; }
+}
